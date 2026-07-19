@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyên trang Sách nói & Nội dung số | Thư viện Nguyễn Đình Chiểu Vĩnh Long</title>
+    <meta
+      name="description"
+      content="Bản demo Chuyên trang Sách nói & Nội dung số: thư viện audiobook, podcast, video và ứng dụng AI đọc toàn văn tài liệu."
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/public.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="#" class="brand">
+          <svg
+            class="brand-logo"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+            <path d="M4 5.5v14A2.5 2.5 0 0 0 6.5 22H19" />
+            <path d="M8 8h8M8 11h8" />
+          </svg>
+          <span class="brand-text">
+            <strong>Chuyên trang Sách nói &amp; Nội dung số</strong>
+          </span>
+        </a>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="#trang-chu">Trang chủ</a>
+          <a href="#sach-noi">Sách nói</a>
+          <a href="#podcast">Podcast</a>
+          <a href="#video">Video</a>
+          <a href="#ung-dung-ai">Ứng dụng AI</a>
+          <a href="#gioi-thieu">Giới thiệu</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="trang-chu">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+            <g stroke="var(--color-primary)" stroke-width="1.4">
+              <path d="M1440,0 L980,900" opacity="0.14" />
+              <path d="M1440,90 L760,900" opacity="0.11" />
+              <path d="M1440,180 L560,900" opacity="0.09" />
+              <path d="M1440,270 L380,900" opacity="0.07" />
+              <path d="M1440,360 L220,900" opacity="0.05" />
+            </g>
+            <g stroke="var(--color-accent)" stroke-width="1.6">
+              <path d="M1180,0 A420,420 0 0 1 1440,260" opacity="0.4" />
+              <path d="M980,0 A620,620 0 0 1 1440,460" opacity="0.28" />
+            </g>
+            <g stroke="var(--color-primary)" stroke-width="1.2">
+              <path
+                d="M0,760 C160,720 260,800 420,760 C580,720 680,800 840,760 C1000,720 1100,800 1260,760 C1340,742 1400,760 1440,752"
+                opacity="0.12"
+              />
+              <path
+                d="M0,800 C160,760 260,840 420,800 C580,760 680,840 840,800 C1000,760 1100,840 1260,800 C1340,782 1400,800 1440,792"
+                opacity="0.08"
+              />
+            </g>
+            <g fill="var(--color-accent)">
+              <circle cx="1120" cy="120" r="3" opacity="0.4" />
+              <circle cx="1220" cy="220" r="2" opacity="0.35" />
+              <circle cx="1300" cy="80" r="2.5" opacity="0.4" />
+              <circle cx="980" cy="180" r="2" opacity="0.3" />
+            </g>
+          </svg>
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Chuyên trang nội dung số</span>
+            <h1>Sách nói &amp; Nội dung số</h1>
+            <p>
+              Nơi khai thác kho tài liệu, podcast và video — được sản xuất với sự hỗ trợ của AI
+              đọc toàn văn.
+            </p>
+
+            <div class="hero-search">
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input
+                  id="hero-search"
+                  type="text"
+                  placeholder="Tìm sách nói theo tên..."
+                  aria-label="Tìm kiếm sách nói"
+                />
+              </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top: var(--space-6)">
+              <a href="#sach-noi" class="btn btn-primary">Nghe thử ngay</a>
+              <a href="#ung-dung-ai" class="btn btn-ghost">Tìm hiểu</a>
+            </div>
+          </div>
+
+          <div class="hero-art">
+            <img
+              src="assets/img/cover.png"
+              alt="Ứng dụng sách nói — nghe tri thức mọi lúc, mọi nơi"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="stat-banner stat-row">
+            <div class="stat-item">
+              <div class="stat-value">500</div>
+              <div class="stat-label">Tài liệu trong lộ trình dự án</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Chủ đề: Hồ Chí Minh &amp; Địa chí</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">AI</div>
+              <div class="stat-label">Đọc toàn văn tự động</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Định dạng: Sách nói, Podcast, Video</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SÁCH NÓI -->
+      <section id="sach-noi">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" fill="none">
+            <g stroke="var(--color-primary)" stroke-width="1.3">
+              <path d="M-40,120 A160,160 0 0 1 120,-40" opacity="0.10" />
+              <path d="M-40,180 A220,220 0 0 1 180,-40" opacity="0.08" />
+              <path d="M-40,240 A280,280 0 0 1 240,-40" opacity="0.06" />
+            </g>
+            <g stroke="var(--color-primary)" stroke-width="1.3">
+              <path d="M1480,520 A160,160 0 0 1 1320,680" opacity="0.10" />
+              <path d="M1480,460 A220,220 0 0 1 1260,680" opacity="0.08" />
+              <path d="M1480,400 A280,280 0 0 1 1200,680" opacity="0.06" />
+            </g>
+            <g stroke="var(--color-accent)" stroke-width="1">
+              <line x1="0" y1="0" x2="0" y2="60" opacity="0.2" />
+              <line x1="14" y1="0" x2="14" y2="46" opacity="0.16" />
+              <line x1="28" y1="0" x2="28" y2="34" opacity="0.12" />
+            </g>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Thư viện</span>
+            <h2 class="section-title">Sách nói (Audiobook)</h2>
+          </div>
+          <p class="section-subtitle">
+            Danh mục sách nói minh hoạ, được sản xuất tự động từ tài liệu PDF bằng
+            công nghệ AI đọc toàn văn. Chọn một tựa sách để nghe thử.
+          </p>
+
+          <div class="chip-row" id="library-chips"></div>
+
+          <div class="section-toolbar">
+            <div class="search-box" style="max-width: 320px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input
+                id="library-search"
+                type="text"
+                placeholder="Tìm theo tên sách..."
+                aria-label="Tìm sách nói"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-4" id="library-grid"></div>
+        </div>
+      </section>
+
+      <!-- PODCAST -->
+      <section id="podcast" class="section-alt">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="waveTileA" width="220" height="200" patternUnits="userSpaceOnUse">
+                <path
+                  d="M0,100 C 27,60 46,60 73,100 C 100,140 119,140 146,100 C 173,60 192,60 220,100"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  stroke-width="1.6"
+                />
+              </pattern>
+              <pattern id="waveTileB" width="170" height="200" patternUnits="userSpaceOnUse">
+                <path
+                  d="M0,100 C 21,68 42,68 64,100 C 85,132 106,132 128,100 C 149,68 170,68 170,100"
+                  fill="none"
+                  stroke="var(--color-accent)"
+                  stroke-width="1.4"
+                />
+              </pattern>
+            </defs>
+            <rect x="0" y="20" width="1440" height="140" fill="url(#waveTileA)" opacity="0.09" />
+            <rect x="0" y="480" width="1440" height="140" fill="url(#waveTileB)" opacity="0.08" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Nội dung số</span>
+            <h2 class="section-title">Podcast</h2>
+          </div>
+          <p class="section-subtitle">
+            Các số phát podcast minh hoạ, sử dụng tạm nội dung audio đã sản xuất
+            trong bản demo.
+          </p>
+
+          <div class="grid grid-3" id="podcast-grid"></div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section id="video">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="sprocket" width="60" height="60" patternUnits="userSpaceOnUse">
+                <rect
+                  x="22"
+                  y="10"
+                  width="16"
+                  height="10"
+                  rx="2"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  stroke-width="1.2"
+                />
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="60" height="640" fill="url(#sprocket)" opacity="0.18" />
+            <rect x="1380" y="0" width="60" height="640" fill="url(#sprocket)" opacity="0.18" />
+            <g stroke="var(--color-accent)" stroke-width="1.4">
+              <path d="M1440,0 L1040,640" opacity="0.16" />
+              <path d="M1440,140 L1220,640" opacity="0.12" />
+            </g>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Nội dung số</span>
+            <h2 class="section-title">Video</h2>
+          </div>
+          <p class="section-subtitle">
+            Video minh hoạ, giới thiệu sách, điểm sách và tóm tắt tác phẩm.
+            Nội dung video thuộc lộ trình sản xuất tiếp theo của dự án.
+          </p>
+
+          <div class="grid grid-3" id="video-grid"></div>
+        </div>
+      </section>
+
+      <!-- ỨNG DỤNG AI -->
+      <section id="ung-dung-ai" class="section-alt">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="dotGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.6" fill="var(--color-primary)" />
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="1440" height="640" fill="url(#dotGrid)" opacity="0.14" />
+            <g stroke="var(--color-accent)" stroke-width="1.3" fill="none">
+              <path d="M120,80 L280,140 L260,300 L420,260 L400,420" opacity="0.28" />
+              <path d="M1180,120 L1040,220 L1180,320 L1020,400 L1160,520" opacity="0.28" />
+            </g>
+            <g fill="var(--color-accent)">
+              <circle cx="120" cy="80" r="3.5" opacity="0.5" />
+              <circle cx="280" cy="140" r="3" opacity="0.45" />
+              <circle cx="260" cy="300" r="3" opacity="0.45" />
+              <circle cx="420" cy="260" r="3" opacity="0.45" />
+              <circle cx="400" cy="420" r="3" opacity="0.45" />
+              <circle cx="1180" cy="120" r="3.5" opacity="0.5" />
+              <circle cx="1040" cy="220" r="3" opacity="0.45" />
+              <circle cx="1180" cy="320" r="3" opacity="0.45" />
+              <circle cx="1020" cy="400" r="3" opacity="0.45" />
+              <circle cx="1160" cy="520" r="3" opacity="0.45" />
+            </g>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Công nghệ</span>
+            <h2 class="section-title">Ứng dụng AI trong truyền thông tri thức</h2>
+          </div>
+          <p class="section-subtitle">
+            Toàn bộ sách nói trong chuyên trang được sản xuất bằng quy trình AI
+            đọc toàn văn tài liệu, giúp rút ngắn thời gian số hoá 500 tài liệu về
+            Chủ tịch Hồ Chí Minh và địa chí Vĩnh Long.
+          </p>
+
+          <div class="ai-section">
+            <div class="ai-feature-list">
+              <div class="ai-feature">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Đọc toàn văn tài liệu</h4>
+                  <p>Chuyển hoá PDF (kể cả bản quét OCR) thành audio đầy đủ nội dung.</p>
+                </div>
+              </div>
+
+              <div class="ai-feature">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 4v4M12 16v4M4 12h4M16 12h4" />
+                    <circle cx="12" cy="12" r="4" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Chuẩn hoá văn bản tiếng Việt</h4>
+                  <p>Mở rộng viết tắt học thuật, chuyển số La Mã sang tiếng Việt, dọn lỗi OCR.</p>
+                </div>
+              </div>
+
+              <div class="ai-feature">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="9" y="2" width="6" height="12" rx="3" />
+                    <path d="M5 11a7 7 0 0 0 14 0M12 18v4" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Đa dạng giọng đọc</h4>
+                  <p>Nhiều giọng đọc AI để lựa chọn phù hợp cho từng thể loại tài liệu.</p>
+                </div>
+              </div>
+
+              <div class="ai-feature">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M13 2 4 14h6l-1 8 9-12h-6z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Xử lý song song, tăng tốc độ</h4>
+                  <p>Quy trình xử lý theo hàng đợi, rút ngắn thời gian sản xuất số lượng lớn.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-panel">
+              <span class="eyebrow" style="color: var(--color-accent)">Nền tảng công nghệ</span>
+              <h3>Vận hành bởi các công nghệ AI &amp; xử lý tài liệu hiện đại</h3>
+              <p>
+                Chuyên trang có khả năng mở rộng, tích hợp thêm các mô hình AI khác
+                trong tương lai để phục vụ truyền thông tri thức, tìm kiếm ngữ nghĩa
+                và cá nhân hoá trải nghiệm người đọc/người nghe.
+              </p>
+              <div class="tech-pill-row">
+                <span class="tech-pill">Trích xuất PDF</span>
+                <span class="tech-pill">Xử lý ngôn ngữ tự nhiên (LLM)</span>
+                <span class="tech-pill">Text-to-Speech tiếng Việt</span>
+                <span class="tech-pill">Xử lý audio</span>
+                <span class="tech-pill">Kiến trúc mở rộng AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIỚI THIỆU -->
+      <!-- <section id="gioi-thieu">
+        <div class="section-bg" aria-hidden="true">
+          <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" fill="none">
+            <g stroke="var(--color-primary)" stroke-width="1.3">
+              <path
+                d="M-60,520 C60,460 140,560 260,500 C380,440 460,540 580,500 C700,460 780,520 860,480"
+                opacity="0.1"
+              />
+              <path
+                d="M-60,570 C60,510 140,610 260,550 C380,490 460,590 580,550 C700,510 780,570 860,530"
+                opacity="0.08"
+              />
+              <path
+                d="M-60,620 C60,560 140,660 260,600 C380,540 460,640 580,600 C700,560 780,620 860,580"
+                opacity="0.06"
+              />
+            </g>
+            <g stroke="var(--color-accent)" stroke-width="1.2">
+              <circle cx="1220" cy="140" r="4" opacity="0.3" fill="var(--color-accent)" />
+              <circle cx="1220" cy="140" r="40" opacity="0.22" />
+              <circle cx="1220" cy="140" r="70" opacity="0.14" />
+            </g>
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Về chuyên trang</span>
+            <h2 class="section-title">Giới thiệu</h2>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p>
+                Chuyên trang Sách nói &amp; Nội dung số là hạng mục thuộc dự án số hoá
+                của Thư viện Nguyễn Đình Chiểu Vĩnh Long, hướng tới xây dựng kho nội
+                dung đa phương tiện (audiobook, podcast, video) về Chủ tịch Hồ Chí
+                Minh và địa chí Vĩnh Long, phục vụ nhu cầu tra cứu và học tập của
+                cộng đồng.
+              </p>
+              <p>
+                Địa chỉ chuyên trang dự kiến:
+                <strong>media.tvndc.vinhlong.gov.vn</strong>
+              </p>
+            </div>
+
+            <div class="notice-box">
+              <strong>Lưu ý:</strong> Đây là bản demo/đề xuất giải pháp, được xây dựng
+              để minh hoạ ý tưởng và công nghệ. Đây không phải là cổng thông tin chính
+              thức của Thư viện Nguyễn Đình Chiểu Vĩnh Long hay bất kỳ cơ quan nhà
+              nước nào. Toàn bộ nội dung, số liệu thống kê hiển thị trong trang chỉ
+              mang tính minh hoạ.
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand" style="margin-bottom: var(--space-3)">
+              <svg class="brand-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+                <path d="M4 5.5v14A2.5 2.5 0 0 0 6.5 22H19" />
+              </svg>
+              <span class="brand-text">
+                <strong>Chuyên trang Sách nói &amp; Nội dung số</strong>
+              </span>
+            </div>
+            <p style="opacity: 0.85; font-size: 0.88rem; max-width: 380px">
+              Bản demo giải pháp cho Thư viện Nguyễn Đình Chiểu Vĩnh Long — kho
+              audiobook, podcast, video về Chủ tịch Hồ Chí Minh và địa chí Vĩnh Long.
+            </p>
+          </div>
+
+          <div>
+            <h4>Chuyên mục</h4>
+            <ul>
+              <li><a href="#sach-noi">Sách nói</a></li>
+              <li><a href="#podcast">Podcast</a></li>
+              <li><a href="#video">Video</a></li>
+              <li><a href="#ung-dung-ai">Ứng dụng AI</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Thông tin</h4>
+            <ul>
+              <li><a href="#gioi-thieu">Giới thiệu dự án</a></li>
+              <li>media.tvndc.vinhlong.gov.vn (dự kiến)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          <span>© Bản demo đề xuất — Chuyên trang Sách nói &amp; Nội dung số.</span>
+          <span>Không phải trang thông tin chính thức.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Thanh phát audio cố định -->
+    <div class="player-bar" id="player-bar">
+      <div class="player-inner">
+        <div class="player-info">
+          <strong id="player-title">Chưa phát</strong>
+          <span id="player-subtitle">Chọn một sách nói để nghe thử</span>
+        </div>
+        <div class="player-controls">
+          <button class="btn btn-icon btn-primary" id="player-play" aria-label="Phát/Tạm dừng">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+          <span class="player-time" id="player-current">0:00</span>
+          <input type="range" class="player-seek" id="player-seek" value="0" min="0" max="100" />
+          <span class="player-time" id="player-duration">0:00</span>
+        </div>
+        <button class="btn btn-ghost btn-sm player-close" id="player-close">Đóng</button>
+      </div>
+      <audio id="player-audio"></audio>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/public.js"></script>
+  </body>
+</html>

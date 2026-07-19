@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản trị nội dung | Chuyên trang Sách nói & Nội dung số</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <!-- Cổng đăng nhập demo (không xác thực thật) -->
+    <div class="admin-login" id="admin-login">
+      <div class="admin-login-card">
+        <div class="brand">
+          <svg
+            class="brand-logo"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+            <path d="M4 5.5v14A2.5 2.5 0 0 0 6.5 22H19" />
+          </svg>
+          <span class="brand-text">
+            <strong>Bảng quản trị</strong>
+          </span>
+        </div>
+        <p class="hint">Chuyên trang Sách nói &amp; Nội dung số — khu vực nội bộ</p>
+
+        <form id="login-form">
+          <div class="field">
+            <label for="admin-user">Tài khoản</label>
+            <input id="admin-user" type="text" placeholder="quan-tri-vien" />
+          </div>
+          <div class="field">
+            <label for="admin-pass">Mật khẩu</label>
+            <input id="admin-pass" type="password" placeholder="••••••••" />
+          </div>
+          <button class="btn btn-primary" type="submit">Đăng nhập</button>
+        </form>
+
+        <p class="demo-note">
+          Đây là màn hình đăng nhập minh hoạ, không kết nối hệ thống xác thực thật.
+          Bấm "Đăng nhập" để vào xem giao diện quản trị demo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Khung quản trị -->
+    <div class="admin-shell" id="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <svg
+            class="brand-logo"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+            <path d="M4 5.5v14A2.5 2.5 0 0 0 6.5 22H19" />
+          </svg>
+          <span class="brand-text">
+            <strong>Quản trị nội dung</strong>
+            <span>Sách nói &amp; Nội dung số</span>
+          </span>
+        </div>
+
+        <nav class="admin-nav">
+          <button type="button" class="is-active" data-view="view-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="3" width="7" height="9" rx="1" />
+              <rect x="14" y="3" width="7" height="5" rx="1" />
+              <rect x="14" y="12" width="7" height="9" rx="1" />
+              <rect x="3" y="16" width="7" height="5" rx="1" />
+            </svg>
+            Thống kê khai thác
+          </button>
+          <button type="button" data-view="view-cms">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19a1 1 0 0 1 1 1v14.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 21.5" />
+              <path d="M4 5.5v14A2.5 2.5 0 0 0 6.5 22H19" />
+            </svg>
+            Quản lý nội dung
+          </button>
+          <button type="button" data-view="view-convert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6z" />
+            </svg>
+            Convert PDF &rarr; Audio
+          </button>
+        </nav>
+
+        <div class="admin-sidebar-footer">
+          Bản demo nội bộ — không công khai.
+          <a href="index.html">&larr; Về chuyên trang</a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <!-- DASHBOARD -->
+        <section class="admin-view is-active" id="view-dashboard">
+          <div class="admin-view-head">
+            <div>
+              <h2>Thống kê khai thác</h2>
+              <p>Tổng quan tình hình sản xuất và khai thác nội dung (dữ liệu minh hoạ).</p>
+            </div>
+          </div>
+
+          <div class="kpi-row" id="kpi-row"></div>
+
+          <div class="dashboard-grid">
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Lượt nghe theo ngày (demo)</h3>
+              </div>
+              <div class="bar-chart" id="bar-chart"></div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Sách nói được nghe nhiều</h3>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tên tài liệu</th>
+                    <th>Chủ đề</th>
+                    <th>Thời lượng</th>
+                  </tr>
+                </thead>
+                <tbody id="top-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- CMS -->
+        <section class="admin-view" id="view-cms">
+          <div class="admin-view-head">
+            <div>
+              <h2>Quản lý nội dung (CMS)</h2>
+              <p>Danh sách tài liệu sách nói trong chuyên trang.</p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="cms-toolbar">
+              <div class="search-box" style="max-width: 320px">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input type="text" placeholder="Tìm tài liệu..." />
+              </div>
+              <button class="btn btn-primary btn-sm" type="button">+ Thêm tài liệu</button>
+            </div>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tên tài liệu</th>
+                  <th>Chủ đề</th>
+                  <th>Loại</th>
+                  <th>Thời lượng</th>
+                  <th>Trạng thái</th>
+                  <th>Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="cms-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- CONVERT -->
+        <section class="admin-view" id="view-convert">
+          <div class="admin-view-head">
+            <div>
+              <h2>Chuyển đổi PDF sang Audio</h2>
+              <p>Công cụ nội bộ để sản xuất sách nói từ 500 tài liệu PDF bằng AI.</p>
+            </div>
+          </div>
+
+          <div class="convert-grid">
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Tải tài liệu lên</h3>
+              </div>
+
+              <form id="convert-form">
+                <div class="upload-drop">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 16V4M7 9l5-5 5 5" />
+                    <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" />
+                  </svg>
+                  <div>Kéo thả file PDF vào đây hoặc chọn file</div>
+                </div>
+
+                <div class="field">
+                  <label for="convert-file">Tệp PDF</label>
+                  <input id="convert-file" type="file" accept="application/pdf" />
+                </div>
+
+                <div class="field">
+                  <label for="convert-voice">Giọng đọc</label>
+                  <select id="convert-voice">
+                    <option>Phạm Tuyên</option>
+                    <option>Minh Triết</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="convert-batch">Số trang mỗi batch xử lý</label>
+                  <select id="convert-batch">
+                    <option>10 trang</option>
+                    <option selected>20 trang</option>
+                    <option>50 trang</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-primary" id="convert-start" type="submit">
+                  Bắt đầu chuyển đổi
+                </button>
+              </form>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Tiến trình xử lý (mô phỏng)</h3>
+              </div>
+              <div class="pipeline-steps" id="pipeline-steps"></div>
+              <div class="convert-output" id="convert-output"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

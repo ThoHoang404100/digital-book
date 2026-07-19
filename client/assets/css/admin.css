@@ -1,0 +1,347 @@
+body.admin-body {
+  background: var(--color-bg);
+}
+
+/* Login gate */
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+.admin-login-card .brand {
+  justify-content: center;
+  margin-bottom: var(--space-2);
+}
+
+.admin-login-card p.hint {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  margin-bottom: var(--space-6);
+}
+
+.admin-login-card .btn-primary {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.demo-note {
+  margin-top: var(--space-4);
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Shell layout */
+.admin-shell {
+  display: none;
+  min-height: 100vh;
+  grid-template-columns: 240px 1fr;
+}
+
+.admin-shell.is-active {
+  display: grid;
+}
+
+.admin-sidebar {
+  background: var(--color-primary-dark);
+  color: var(--color-text-inverse);
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.admin-sidebar .brand {
+  color: var(--color-text-inverse);
+  padding: 0 var(--space-2);
+}
+
+.admin-sidebar .brand span {
+  color: rgba(253, 249, 242, 0.65);
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.admin-nav button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.7rem var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(253, 249, 242, 0.75);
+  text-align: left;
+}
+
+.admin-nav button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.admin-nav button:hover {
+  background: rgba(253, 249, 242, 0.08);
+  color: var(--color-text-inverse);
+}
+
+.admin-nav button.is-active {
+  background: rgba(253, 249, 242, 0.14);
+  color: var(--color-text-inverse);
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  font-size: 0.78rem;
+  color: rgba(253, 249, 242, 0.6);
+}
+
+.admin-sidebar-footer a {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: 600;
+}
+
+.admin-main {
+  padding: var(--space-8);
+  overflow-y: auto;
+}
+
+.admin-view {
+  display: none;
+}
+
+.admin-view.is-active {
+  display: block;
+}
+
+.admin-view-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.admin-view-head h2 {
+  font-size: 1.4rem;
+}
+
+.admin-view-head p {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+/* Dashboard */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.kpi-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.kpi-card .kpi-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.kpi-card .kpi-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.kpi-card .kpi-delta {
+  font-size: 0.76rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-6);
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  height: 180px;
+  padding-top: var(--space-4);
+}
+
+.bar-chart .bar {
+  flex: 1;
+  background: linear-gradient(
+    180deg,
+    var(--color-accent),
+    var(--color-primary)
+  );
+  border-radius: 0;
+  position: relative;
+  min-height: 6px;
+}
+
+.bar-chart .bar span {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 960px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CMS */
+.cms-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+/* Convert tool */
+.convert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-6);
+}
+
+.upload-drop {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.upload-drop svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto var(--space-2);
+  color: var(--color-primary);
+}
+
+.pipeline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.pipeline-step .step-index {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.pipeline-step .step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pipeline-step .step-body strong {
+  display: block;
+  font-size: 0.88rem;
+}
+
+.pipeline-step .step-body small {
+  color: var(--color-text-muted);
+  font-size: 0.76rem;
+}
+
+.pipeline-step .step-status {
+  font-size: 0.76rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pipeline-step.is-active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.pipeline-step.is-active .step-index {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.pipeline-step.is-done .step-index {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.pipeline-step.is-done .step-status {
+  color: #2e7d32;
+}
+
+.pipeline-step.is-active .step-status {
+  color: var(--color-primary);
+}
+
+.convert-output {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 960px) {
+  .convert-grid {
+    grid-template-columns: 1fr;
+  }
+}

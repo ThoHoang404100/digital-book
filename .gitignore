@@ -1,0 +1,21 @@
+# Claude Code local settings/config (personal, not for sharing)
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.ipynb_checkpoints/
+
+# Secrets / environment variables
+.env
+
+# Generated pipeline output (large, regenerable via the pipeline)
+application/workspace/
+application/output/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
