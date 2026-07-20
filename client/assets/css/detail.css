@@ -1,0 +1,344 @@
+/* ============================================================
+   Trang chi tiết Sách nói / Podcast (SPA hash route)
+   Chỉ dùng token có sẵn ở base.css — bo góc 0, wine + gold.
+   ============================================================ */
+
+#view-detail[hidden] {
+  display: none;
+}
+
+/* ---------- Hero chi tiết ---------- */
+.detail-hero {
+  position: relative;
+  padding: var(--space-8) 0 var(--space-12);
+  background:
+    radial-gradient(
+      circle at top right,
+      var(--color-primary-light),
+      transparent 60%
+    ),
+    var(--color-bg);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb .sep {
+  opacity: 0.5;
+}
+
+.breadcrumb .current {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.detail-hero-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+/* Bìa lớn — tái dùng .book-card/.book-cover */
+.detail-cover {
+  max-width: 320px;
+  width: 100%;
+}
+
+.detail-cover .book-card.is-detail-cover {
+  cursor: pointer;
+}
+
+/* Cột thông tin */
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.detail-info .eyebrow {
+  margin-bottom: calc(-1 * var(--space-2));
+}
+
+.detail-title {
+  font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.8rem);
+  line-height: 1.15;
+  outline: none;
+}
+
+.detail-subtitle {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: calc(-1 * var(--space-2));
+}
+
+/* Dải chỉ số */
+.detail-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+}
+
+.detail-stat {
+  min-width: 108px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.ds-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.ds-label {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.detail-desc {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 560px;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.detail-actions .btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---------- Thân trang: nội dung + liên quan ---------- */
+.detail-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.detail-main .section-head {
+  margin-bottom: var(--space-4);
+}
+
+.detail-longtext {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.detail-note {
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary);
+  padding: var(--space-4);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-primary-dark);
+}
+
+/* Sidebar audio liên quan */
+.detail-aside .section-head {
+  margin-bottom: var(--space-4);
+}
+
+.aside-title {
+  font-size: 1.15rem;
+}
+
+.related-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.related-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.related-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.related-cover {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 70px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      120% 90% at 78% 8%,
+      color-mix(in srgb, var(--accent) 34%, transparent),
+      transparent 48%
+    ),
+    linear-gradient(158deg, var(--g1), var(--g2));
+  box-shadow: inset 8px 0 16px -12px rgba(0, 0, 0, 0.75);
+}
+
+.related-motif {
+  position: absolute;
+  right: -14%;
+  bottom: -8%;
+  width: 66%;
+  color: var(--accent);
+  opacity: 0.28;
+}
+
+.related-motif svg {
+  width: 100%;
+  height: auto;
+}
+
+.related-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.related-kicker {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.related-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.related-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+}
+
+.related-meta svg {
+  width: 13px;
+  height: 13px;
+}
+
+.related-play {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.related-play svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
+}
+
+.related-item:hover .related-play {
+  background: var(--color-accent);
+  color: #1a1216;
+  transform: scale(1.06);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .detail-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .detail-cover {
+    order: -1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .detail-info {
+    align-items: stretch;
+    text-align: left;
+  }
+}
+
+@media (max-width: 860px) {
+  .detail-body-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-stat {
+    flex: 1 1 calc(50% - var(--space-3));
+    min-width: 0;
+  }
+
+  .detail-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

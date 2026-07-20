@@ -36,6 +36,38 @@ function catLabel(id) {
   return found ? found.label : id;
 }
 
+/* Điều hướng sang trang chi tiết (hash route do detail.js xử lý) */
+function navToDetail(kind, id) {
+  location.hash = `#/${kind}/${id}`;
+}
+
+/*
+ * Gắn hành vi cho 1 thẻ audio (sách nói / podcast):
+ * - Click / Enter / Space trên bìa  -> mở trang chi tiết.
+ * - Nút play tròn khi hover          -> phát nhanh tại chỗ (không chuyển trang).
+ */
+function wireAudioCard(card, item, kind) {
+  const cover = card.querySelector(".book-cover");
+  const playBtn = card.querySelector(".cover-play");
+
+  const open = () => navToDetail(kind, item.id);
+
+  cover.addEventListener("click", open);
+  cover.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      open();
+    }
+  });
+
+  if (playBtn) {
+    playBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      AudioPlayer.play(item, card);
+    });
+  }
+}
+
 function formatListens(n) {
   if (!n) return "";
   if (n >= 1000) return (n / 1000).toFixed(1).replace(".0", "") + "k";
@@ -96,15 +128,7 @@ function audiobookCard(item) {
     </article>
   `);
 
-  const cover = card.querySelector(".book-cover");
-  const trigger = () => AudioPlayer.play(item, card);
-  cover.addEventListener("click", trigger);
-  cover.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      trigger();
-    }
-  });
+  wireAudioCard(card, item, "sach");
 
   return card;
 }
@@ -146,15 +170,7 @@ function podcastCard(item) {
     </article>
   `);
 
-  const cover = card.querySelector(".book-cover");
-  const trigger = () => AudioPlayer.play(item, card);
-  cover.addEventListener("click", trigger);
-  cover.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      trigger();
-    }
-  });
+  wireAudioCard(card, item, "podcast");
 
   return card;
 }

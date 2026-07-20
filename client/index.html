@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chuyên trang Sách nói & Nội dung số | Thư viện Nguyễn Đình Chiểu Vĩnh Long</title>
+    <title>Chuyên trang Sách nói & Nội dung số</title>
     <meta
       name="description"
       content="Bản demo Chuyên trang Sách nói & Nội dung số: thư viện audiobook, podcast, video và ứng dụng AI đọc toàn văn tài liệu."
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/public.css" />
+    <link rel="stylesheet" href="assets/css/detail.css" />
   </head>
   <body>
     <header class="site-header">
@@ -53,6 +54,8 @@
     </header>
 
     <main>
+      <!-- Trang chủ (danh mục) -->
+      <div id="view-home">
       <!-- HERO -->
       <section class="hero" id="trang-chu">
         <div class="section-bg" aria-hidden="true">
@@ -447,6 +450,11 @@
           </div>
         </div>
       </section> -->
+      </div>
+      <!-- /view-home -->
+
+      <!-- Trang chi tiết (render bằng detail.js) -->
+      <div id="view-detail" hidden></div>
     </main>
 
     <footer class="site-footer">
@@ -519,5 +527,6 @@
     <script src="assets/js/data.js"></script>
     <script src="assets/js/player.js"></script>
     <script src="assets/js/public.js"></script>
+    <script src="assets/js/detail.js"></script>
   </body>
 </html>
